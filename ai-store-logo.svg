@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="188" height="44" viewBox="0 0 188 44" fill="none">
+  <rect x="1" y="1" width="42" height="42" rx="11" fill="#282827"/>
+  <path d="M22 10.5L25.7 19.3L34.5 23L25.7 26.7L22 35.5L18.3 26.7L9.5 23L18.3 19.3L22 10.5Z" fill="#E8E2D6"/>
+  <circle cx="22" cy="23" r="3.7" fill="#C66A45"/>
+  <text x="54" y="27.5" fill="#282827" font-family="Georgia, 'Times New Roman', serif" font-size="20" font-weight="700" letter-spacing="-0.6">IA STORE</text>
+  <circle cx="181" cy="27" r="3" fill="#C66A45"/>
+</svg>
