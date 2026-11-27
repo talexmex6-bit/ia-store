@@ -1,1 +1,127 @@
-<!doctype html><html lang="es"><head>  <meta charset="UTF-8">  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <meta name="theme-color" content="#f7f4ed">  <meta name="description" content="IA STORE ofrece planes mensuales de Claude Pro y Claude Max por dispositivo.">  <title>IA STORE | Claude Pro</title>  <link rel="preconnect" href="https://fonts.googleapis.com">  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Lora:ital,wght@0,500;1,500&display=swap" rel="stylesheet">  <link rel="stylesheet" href="styles.css"></head><body>  <div class="welcome" id="welcome" aria-hidden="true">    <div class="welcome-mark">      <img src="ai-store-logo.svg" alt="IA STORE">    </div>  </div>  <header class="nav container">    <a class="brand" href="#" aria-label="IA STORE inicio">      <img src="ai-store-logo.svg" alt="IA STORE">    </a>    <nav aria-label="Navegación principal">      <a class="nav-link" href="#planes">Planes</a>      <a class="nav-contact" id="navWhatsapp" href="#" target="_blank" rel="noopener">        <span>Contactar</span>        <span class="contact-arrow">↗</span>      </a>    </nav>  </header>  <main>    <section class="hero container" id="inicio">      <div class="hero-copy reveal">
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7f4ed">
+  <meta name="description" content="IA STORE ofrece planes mensuales de Claude Pro y Claude Max por dispositivo.">
+  <title>IA STORE | Claude Pro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Lora:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav container">
+    <a class="brand" href="#" aria-label="IA STORE inicio"><img src="ai-store-logo.svg" alt="IA STORE"></a>
+    <nav aria-label="Navegación principal">
+      <a class="nav-link" href="#planes">Planes</a>
+      <a class="nav-contact" id="navWhatsapp" href="#" target="_blank" rel="noopener"><span>Contactar</span><span class="contact-arrow">↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container" id="inicio">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span></span> Inteligencia artificial para todos</p>
+        <h1>Piensa más claro.<br><em>Crea sin límites.</em></h1>
+        <p class="hero-lead">Acceso mensual a <strong>Claude Pro</strong> para investigar, escribir, analizar y llevar tus ideas más lejos.</p>
+        <div class="trust-row">
+          <span><b>30</b> días de acceso</span>
+          <span><b>1</b> dispositivo</span>
+          <span><b>100%</b> privado</span>
+        </div>
+        <div class="hero-actions">
+          <a class="button primary" href="#planes">Ver planes <span>↗</span></a>
+          <a class="text-link" id="heroWhatsapp" href="#" target="_blank" rel="noopener"><span>●</span> Hablar por WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="claude-preview reveal" aria-label="Vista previa de Claude">
+        <div class="preview-glow"></div>
+        <div class="preview-top"><div class="preview-brand"><img src="ai-store-logo.svg" alt="IA STORE"></div><span class="preview-dot">•••</span></div>
+        <div class="preview-message">
+          <div class="claude-mark"><span>✦</span></div>
+          <p>¿Qué idea quieres desarrollar?</p>
+          <div class="preview-suggestions"><span>Escribir</span><span>Analizar</span><span>Crear</span></div>
+        </div>
+        <div class="preview-prompt"><span>Escribe tu mensaje...</span><button type="button" aria-label="Enviar"><span>↑</span></button></div>
+      </div>
+    </section>
+
+    <section class="plans container" id="planes">
+      <div class="section-heading reveal"><p class="eyebrow">Planes mensuales</p><h2>Elige cómo quieres trabajar.</h2></div>
+      <div class="plan-grid">
+        <article class="plan-card reveal">
+          <div class="plan-meta"><span class="plan-name">Claude Pro</span><span class="recommended">Recomendado</span></div>
+          <p class="plan-description">Más conversación y capacidad para tareas importantes del día a día.</p>
+          <div class="price"><span>$</span>9.99 <small>/ mes</small></div>
+          <p class="device-note">por dispositivo</p>
+          <div class="divider"></div>
+          <ul>
+            <li>Suscripción mensual por 30 días</li>
+            <li>Cuenta individual por dispositivo</li>
+            <li>Activación coordinada por WhatsApp</li>
+            <li>Atención durante la vigencia</li>
+          </ul>
+          <button class="plan-button" data-plan="Claude Pro — $9.99 por dispositivo">Obtener Claude Pro <span>↗</span></button>
+        </article>
+
+        <article class="plan-card reveal">
+          <div class="plan-meta"><span class="plan-name">Claude Max</span></div>
+          <p class="plan-description">Máxima capacidad para proyectos exigentes y uso intensivo.</p>
+          <div class="price"><span>$</span>75 <small>/ mes</small></div>
+          <p class="device-note">por dispositivo</p>
+          <div class="divider"></div>
+          <ul>
+            <li>Suscripción mensual al plan Max</li>
+            <li>Cuenta individual por dispositivo</li>
+            <li>Activación coordinada por WhatsApp</li>
+            <li>Atención durante la vigencia</li>
+          </ul>
+          <button class="plan-button outline" data-plan="Claude Max — $75 por dispositivo">Consultar Claude Max <span>↗</span></button>
+        </article>
+      </div>
+    </section>
+
+    <section class="process container">
+      <p class="eyebrow reveal">El proceso</p>
+      <div class="process-grid reveal">
+        <article><span>01</span><h3>Elige tu plan</h3><p>Selecciona Claude Pro o Claude Max.</p></article>
+        <article><span>02</span><h3>Realiza el pago</h3><p>Paga con PayPal o tarjeta, o desde Ecuador por WhatsApp.</p></article>
+        <article><span>03</span><h3>Activa tu acceso</h3><p>Envía tu comprobante por WhatsApp para recibir la activación.</p></article>
+      </div>
+    </section>
+
+    <section class="payment container reveal" id="pagos">
+      <div><p class="eyebrow">Pago</p><h2>Una forma simple de comenzar.</h2></div>
+      <div class="payment-options">
+        <button class="payment-option" id="paypalButton" type="button"><span class="payment-icon paypal">P</span><span><b>Pagar con PayPal o tarjeta</b><small>Elige el plan que prefieras</small></span><span class="arrow">↗</span></button>
+        <a class="payment-option" id="ecuadorWhatsapp" href="#" target="_blank" rel="noopener"><span class="payment-icon whatsapp">●</span><span><b>Desde Ecuador</b><small>Escribir por WhatsApp</small></span><span class="arrow">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner"><a class="brand" href="#"><img src="ai-store-logo.svg" alt="IA STORE"></a><p>© <span id="year"></span> IA STORE · Ecuador</p></div>
+  </footer>
+
+  <div class="payment-modal" id="paymentModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="paymentTitle">
+    <button class="modal-backdrop" type="button" data-close-modal aria-label="Cerrar"></button>
+    <div class="payment-dialog">
+      <button class="modal-close" type="button" data-close-modal aria-label="Cerrar">×</button>
+      <p class="eyebrow">Completa tu compra</p>
+      <h2 id="paymentTitle">Elige tu plan</h2>
+      <p class="modal-lead">Selecciona una opción para continuar al pago seguro.</p>
+      <div class="modal-plans">
+        <a class="modal-plan" href="https://www.paypal.com/ncp/payment/TL4M6XHNXC3F6" target="_blank" rel="noopener" data-paypal-plan="Claude Pro"><div><span>Claude Pro</span><small>30 días por dispositivo</small></div><strong>$9.99</strong><b>↗</b></a>
+        <a class="modal-plan" href="https://www.paypal.com/ncp/payment/SNWG9A9946RUA" target="_blank" rel="noopener" data-paypal-plan="Claude Max"><div><span>Claude Max</span><small>30 días por dispositivo</small></div><strong>$75</strong><b>↗</b></a>
+      </div>
+      <div class="activation-note"><span>01</span><p><strong>Después de pagar</strong> envía tu comprobante y contacta por WhatsApp para activar el acceso.</p></div>
+      <a class="whatsapp-activation" id="modalWhatsapp" href="#" target="_blank" rel="noopener">Contactar por WhatsApp para activar el acceso <span>↗</span></a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
