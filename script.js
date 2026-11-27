@@ -17,18 +17,24 @@ for (const id of ["navWhatsapp", "heroWhatsapp", "ecuadorWhatsapp"]) {
   element.href = whatsappUrl(id === "ecuadorWhatsapp" ? CONFIG.ecuadorWhatsappMessage : defaultMessage);
 }
 
-document.querySelectorAll(".plan-button").forEach((button) => {
-  button.addEventListener("click", () => {
-    const plan = button.dataset.plan;
-    const message = `Hola, quiero solicitar el plan: ${plan}. Mi pago será por el dispositivo que voy a utilizar. ¿Cuál es el siguiente paso?`;
-    window.open(whatsappUrl(message), "_blank", "noopener");
-  });
-});
-
 const paymentModal = document.getElementById("paymentModal");
+const paymentTitle = document.getElementById("paymentTitle");
+const selectedPlanName = document.getElementById("selectedPlanName");
+const selectedPlanPrice = document.getElementById("selectedPlanPrice");
+const selectedPaypal = document.getElementById("selectedPaypal");
+const selectedTransfer = document.getElementById("selectedTransfer");
 const modalWhatsapp = document.getElementById("modalWhatsapp");
 
-function openPaymentModal() {
+function openPlanModal(plan, price, paypalUrl) {
+  paymentTitle.textContent = plan;
+  selectedPlanName.textContent = plan;
+  selectedPlanPrice.textContent = `$${price}`;
+  selectedPaypal.href = paypalUrl;
+
+  const transferMessage = `Hola, quiero pagar por transferencia el plan ${plan} de IA STORE, con un valor de $${price} por dispositivo. Por favor envíame los datos disponibles para realizar el pago.`;
+  selectedTransfer.href = whatsappUrl(transferMessage);
+  modalWhatsapp.href = whatsappUrl(`Hola, quiero activar el plan ${plan} de IA STORE por $${price}. Ya realicé o voy a realizar el pago y necesito confirmar la activación.`);
+
   paymentModal.classList.add("open");
   paymentModal.setAttribute("aria-hidden", "false");
   document.body.classList.add("modal-active");
@@ -40,24 +46,26 @@ function closePaymentModal() {
   document.body.classList.remove("modal-active");
 }
 
-document.getElementById("paypalButton").addEventListener("click", openPaymentModal);
+document.querySelectorAll(".plan-button").forEach((button) => {
+  button.addEventListener("click", () => {
+    openPlanModal(button.dataset.plan, button.dataset.price, button.dataset.paypal);
+  });
+});
+
+document.getElementById("paypalButton").addEventListener("click", () => {
+  openPlanModal("Claude Pro", "9.99", CONFIG.claudeProUrl);
+});
+
 document.querySelectorAll("[data-close-modal]").forEach((element) => element.addEventListener("click", closePaymentModal));
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") closePaymentModal();
 });
 
-modalWhatsapp.href = whatsappUrl("Hola, ya realicé el pago. Quiero contactar con IA STORE para activar el acceso a mi plan de Claude.");
-
-document.querySelectorAll("[data-paypal-plan]").forEach((link) => {
-  link.addEventListener("click", () => {
-    const plan = link.dataset.paypalPlan;
-    modalWhatsapp.href = whatsappUrl(`Hola, voy a pagar el plan ${plan} por PayPal. Después de completar el pago, quiero activar mi acceso.`);
-  });
+selectedPaypal.addEventListener("click", () => {
+  const plan = paymentTitle.textContent;
+  const price = selectedPlanPrice.textContent;
+  modalWhatsapp.href = whatsappUrl(`Hola, voy a pagar el plan ${plan} por $${price.replace('$','')}. Después de completar el pago, quiero activar mi acceso.`);
 });
-
-const welcome = document.getElementById("welcome");
-if (welcome) welcome.remove();
-document.body.classList.remove("welcome-active", "modal-active");
 
 const nav = document.querySelector(".nav");
 window.addEventListener("scroll", () => {
@@ -74,5 +82,4 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.12 });
 
 document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
-
 document.getElementById("year").textContent = new Date().getFullYear();

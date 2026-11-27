@@ -9,17 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Lora:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
-  <style>
-    :root{--paper:#f7f4ed;--ink:#282827;--muted:#77746d;--line:#ddd7cb;--clay:#c66a45;--cream:#fffdf8}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;background:var(--paper)!important;color:var(--ink)!important;font-family:"DM Sans",Arial,sans-serif!important}
-    .container{width:min(1120px,calc(100% - 40px));margin-inline:auto}.nav{height:86px!important;display:flex!important;align-items:center!important;justify-content:space-between!important}.brand{display:flex!important;align-items:center!important;text-decoration:none!important}.brand img{width:188px!important;height:44px!important;display:block!important}nav{display:flex!important;align-items:center!important;gap:8px!important}nav a{color:var(--ink)!important;text-decoration:none!important}.nav-link{padding:11px 14px!important;font-size:14px!important}.nav-contact{height:44px!important;display:flex!important;align-items:center!important;gap:18px!important;margin-left:8px!important;border:1px solid var(--line)!important;border-radius:999px!important;padding:0 10px 0 16px!important;font-size:14px!important}.contact-arrow{width:26px!important;height:26px!important;display:grid!important;place-items:center!important;border-radius:50%!important;background:var(--ink)!important;color:white!important}
-    .hero{min-height:560px!important;display:grid!important;grid-template-columns:1.12fr .88fr!important;align-items:center!important;gap:72px!important;padding:28px 0 64px!important}.eyebrow{margin:0 0 18px!important;color:var(--clay)!important;font-size:11px!important;font-weight:600!important;letter-spacing:1.8px!important;text-transform:uppercase!important}.hero-copy .eyebrow{display:flex!important;align-items:center!important;gap:9px!important}.hero-copy .eyebrow span{width:7px!important;height:7px!important;border-radius:50%!important;background:var(--clay)!important}h1,h2,h3{margin-top:0}.hero h1{margin-bottom:20px!important;font-family:"Lora",Georgia,serif!important;font-size:82px!important;line-height:1.03!important;letter-spacing:-4px!important;font-weight:500!important}.hero h1 em{color:var(--clay)!important;font-style:italic!important}.hero-lead{max-width:530px!important;color:var(--muted)!important;font-size:18px!important;line-height:1.7!important}.trust-row{display:flex!important;margin-top:22px!important}.trust-row span{padding:0 18px!important;border-right:1px solid var(--line)!important;color:var(--muted)!important;font-size:12px!important}.trust-row span:first-child{padding-left:0!important}.trust-row b{display:block!important;margin-bottom:3px!important;color:var(--ink)!important;font-family:"Lora",Georgia,serif!important;font-size:17px!important}.hero-actions{display:flex!important;align-items:center!important;gap:26px!important;margin-top:30px!important}.button{min-height:54px!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:38px!important;border-radius:7px!important;padding:0 22px!important;text-decoration:none!important}.button.primary{background:var(--ink)!important;color:white!important}.text-link{color:var(--ink)!important;text-decoration:none!important;font-size:14px!important}
-    .claude-preview{height:430px!important;position:relative!important;border:1px solid var(--line)!important;border-radius:14px!important;background:rgba(255,253,248,.88)!important;box-shadow:0 28px 70px rgba(87,69,48,.1)!important}.preview-top{height:58px!important;display:flex!important;align-items:center!important;justify-content:space-between!important;border-bottom:1px solid var(--line)!important;padding:0 18px!important}.preview-brand img{width:188px!important;height:44px!important}.preview-message{height:280px!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important}.claude-mark{width:76px!important;height:76px!important;display:grid!important;place-items:center!important;margin-bottom:16px!important;border:1px solid #e8c3b3!important;border-radius:50%!important;background:#f8ede7!important;color:var(--clay)!important}.preview-message p{font-family:"Lora",Georgia,serif!important;font-size:18px!important}.preview-suggestions{display:flex!important;gap:7px!important}.preview-suggestions span{border:1px solid var(--line)!important;border-radius:999px!important;padding:6px 10px!important;font-size:10px!important}.preview-prompt{position:absolute!important;left:18px!important;right:18px!important;bottom:18px!important;height:54px!important;display:flex!important;align-items:center!important;justify-content:space-between!important;border:1px solid var(--line)!important;border-radius:8px!important;padding:0 8px 0 14px!important}.preview-prompt button{width:36px!important;height:36px!important;border:0!important;border-radius:6px!important;background:var(--ink)!important;color:white!important}
-    .payment-modal{position:fixed!important;z-index:80!important;inset:0!important;display:none!important;place-items:center!important}.payment-modal.open{display:grid!important}.modal-backdrop{position:absolute!important;inset:0!important;border:0!important;background:rgba(40,40,39,.48)!important}.payment-dialog{position:relative!important;width:min(560px,calc(100% - 32px))!important;max-height:calc(100vh - 32px)!important;overflow-y:auto!important;border-radius:18px!important;padding:34px!important;background:var(--cream)!important}.plan-grid{display:grid!important;grid-template-columns:1fr 1fr!important}.plan-card{min-height:520px!important;border:1px solid var(--line)!important;border-radius:10px!important;padding:34px!important;background:var(--cream)!important}.plan-button{width:100%!important;height:52px!important;border:0!important;border-radius:6px!important;background:var(--ink)!important;color:white!important}.payment{display:grid!important;grid-template-columns:1fr 1fr!important}
-    @media(max-width:850px){.container{width:calc(100% - 32px)!important}.hero{grid-template-columns:1fr!important;min-height:auto!important;padding:50px 0!important}.hero h1{font-size:58px!important}.claude-preview{max-width:560px!important;width:100%!important;height:430px!important}.plan-grid,.payment{grid-template-columns:1fr!important}}
-    @media(max-width:600px){.nav{height:72px!important}.brand img{width:148px!important}.nav-link{display:none!important}.hero{gap:44px!important;padding:44px 0 60px!important}.hero h1{font-size:47px!important;letter-spacing:-3px!important}.hero-lead{font-size:16px!important}.hero-actions{align-items:stretch!important;flex-direction:column!important}.button{width:100%!important}.trust-row span{padding-inline:10px!important}.claude-preview{height:360px!important}.preview-brand img{width:148px!important}.preview-message{height:226px!important}}
-  </style>
-  <link rel="stylesheet" href="styles.css?v=202611270034">
+  <link rel="stylesheet" href="styles.css?v=202611270036">
 </head>
 <body>
   <header class="nav container">
@@ -74,7 +64,7 @@
             <li>Activación coordinada por WhatsApp</li>
             <li>Atención durante la vigencia</li>
           </ul>
-          <button class="plan-button" data-plan="Claude Pro — $9.99 por dispositivo">Obtener Claude Pro <span>↗</span></button>
+          <button class="plan-button" data-plan="Claude Pro" data-price="9.99" data-paypal="https://www.paypal.com/ncp/payment/TL4M6XHNXC3F6">Obtener Claude Pro <span>↗</span></button>
         </article>
 
         <article class="plan-card reveal">
@@ -89,7 +79,7 @@
             <li>Activación coordinada por WhatsApp</li>
             <li>Atención durante la vigencia</li>
           </ul>
-          <button class="plan-button outline" data-plan="Claude Max — $75 por dispositivo">Consultar Claude Max <span>↗</span></button>
+          <button class="plan-button outline" data-plan="Claude Max" data-price="75" data-paypal="https://www.paypal.com/ncp/payment/SNWG9A9946RUA">Consultar Claude Max <span>↗</span></button>
         </article>
       </div>
     </section>
@@ -98,7 +88,7 @@
       <p class="eyebrow reveal">El proceso</p>
       <div class="process-grid reveal">
         <article><span>01</span><h3>Elige tu plan</h3><p>Selecciona Claude Pro o Claude Max.</p></article>
-        <article><span>02</span><h3>Realiza el pago</h3><p>Paga con PayPal o tarjeta, o desde Ecuador por WhatsApp.</p></article>
+        <article><span>02</span><h3>Realiza el pago</h3><p>Paga con PayPal o solicita una transferencia por WhatsApp.</p></article>
         <article><span>03</span><h3>Activa tu acceso</h3><p>Envía tu comprobante por WhatsApp para recibir la activación.</p></article>
       </div>
     </section>
@@ -107,7 +97,7 @@
       <div><p class="eyebrow">Pago</p><h2>Una forma simple de comenzar.</h2></div>
       <div class="payment-options">
         <button class="payment-option" id="paypalButton" type="button"><span class="payment-icon paypal">P</span><span><b>Pagar con PayPal o tarjeta</b><small>Elige el plan que prefieras</small></span><span class="arrow">↗</span></button>
-        <a class="payment-option" id="ecuadorWhatsapp" href="#" target="_blank" rel="noopener"><span class="payment-icon whatsapp">●</span><span><b>Desde Ecuador</b><small>Escribir por WhatsApp</small></span><span class="arrow">↗</span></a>
+        <a class="payment-option" id="ecuadorWhatsapp" href="#" target="_blank" rel="noopener"><span class="payment-icon whatsapp">●</span><span><b>Desde Ecuador</b><small>Transferencia por WhatsApp</small></span><span class="arrow">↗</span></a>
       </div>
     </section>
   </main>
@@ -121,17 +111,28 @@
     <div class="payment-dialog">
       <button class="modal-close" type="button" data-close-modal aria-label="Cerrar">×</button>
       <p class="eyebrow">Completa tu compra</p>
-      <h2 id="paymentTitle">Elige tu plan</h2>
-      <p class="modal-lead">Selecciona una opción para continuar al pago seguro.</p>
-      <div class="modal-plans">
-        <a class="modal-plan" href="https://www.paypal.com/ncp/payment/TL4M6XHNXC3F6" target="_blank" rel="noopener" data-paypal-plan="Claude Pro"><div><span>Claude Pro</span><small>30 días por dispositivo</small></div><strong>$9.99</strong><b>↗</b></a>
-        <a class="modal-plan" href="https://www.paypal.com/ncp/payment/SNWG9A9946RUA" target="_blank" rel="noopener" data-paypal-plan="Claude Max"><div><span>Claude Max</span><small>30 días por dispositivo</small></div><strong>$75</strong><b>↗</b></a>
+      <h2 id="paymentTitle">Claude Pro</h2>
+      <div class="selected-plan-price"><span id="selectedPlanName">Claude Pro</span><strong id="selectedPlanPrice">$9.99</strong></div>
+      <p class="modal-lead">Elige la forma de pago que prefieras.</p>
+
+      <div class="payment-methods">
+        <a class="payment-method paypal-method" id="selectedPaypal" href="#" target="_blank" rel="noopener">
+          <span class="method-icon">P</span>
+          <span><b>Pagar con PayPal o tarjeta</b><small>Pago internacional seguro</small></span>
+          <span class="method-arrow">↗</span>
+        </a>
+        <a class="payment-method transfer-method" id="selectedTransfer" href="#" target="_blank" rel="noopener">
+          <span class="method-icon">$</span>
+          <span><b>Transferencia desde Ecuador</b><small>Coordina el pago por WhatsApp</small></span>
+          <span class="method-arrow">↗</span>
+        </a>
       </div>
-      <div class="activation-note"><span>01</span><p><strong>Después de pagar</strong> envía tu comprobante y contacta por WhatsApp para activar el acceso.</p></div>
+
+      <div class="activation-note"><span>01</span><p><strong>Después de pagar</strong> envía tu comprobante por WhatsApp para activar el acceso.</p></div>
       <a class="whatsapp-activation" id="modalWhatsapp" href="#" target="_blank" rel="noopener">Contactar por WhatsApp para activar el acceso <span>↗</span></a>
     </div>
   </div>
 
-  <script src="script.js?v=202611270034"></script>
+  <script src="script.js?v=202611270036"></script>
 </body>
 </html>
